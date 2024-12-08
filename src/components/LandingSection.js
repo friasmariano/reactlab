@@ -12,6 +12,7 @@ const LandingSection = () => (
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
+    id="landing-section"
   >
     <VStack>
       <Avatar size="xl" src="https://i.pravatar.cc/150?img=7" name="Pete photo"/>

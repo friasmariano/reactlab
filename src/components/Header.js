@@ -48,7 +48,6 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
-      console.log(id)
     }
   };
 

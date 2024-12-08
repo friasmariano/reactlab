@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.backToTop {
+  border-radius: 30px;
+  opacity: 0.5;
+}
+
+.backToTop:hover {
+  /* box-shadow: 0px 5px 10px green; */
+  opacity: 1;
+}
