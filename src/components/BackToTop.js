@@ -22,7 +22,7 @@ function BackToTop () {
     }
 
     useEffect(() => {
-        const landingSection = document.getElementById('landing-section');
+        const landingSection = document.getElementById('projects');
         const landingSecPosition = landingSection.getBoundingClientRect();
 
         if (landingSecPosition.top >= scrollPosition) {
