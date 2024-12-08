@@ -37,20 +37,20 @@ const socials = [
   },
 ];
 
-const Header = () => {
-  const handleClick = (anchor) => (e) => {
-    e.preventDefault();
+const handleClick = (anchor) => (e) => {
+  e.preventDefault();
 
-    const id = `${anchor}`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+  const id = `${anchor}`;
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
 
+function Header() {
   return (
     <Box
       position="fixed"
