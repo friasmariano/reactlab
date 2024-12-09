@@ -7,34 +7,36 @@ const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack background="white" 
             width="40vw"
-            borderRadius="10" 
+            borderRadius="xl" 
             align="left">
-      <Image src={imageSrc} borderRadius="10" />
+      <Image 
+            src={imageSrc} 
+            borderRadius="xl" />
 
-      <Heading align="left" 
+      <Heading fontSize="xl"
+               align="left" 
                color="black" 
                size="md" 
-               padding="20px 0px 0px 30px"> 
+               padding="20px 0px 0px 20px"> 
       { 
         title 
       }
       </Heading>
 
-      <Text color="gray" 
+      <Text color="gray.500" 
             textStyle="3xl" 
-            padding="10px 10px 0px 30px">
+            paddingLeft="20px">
         {
           description
         }
       </Text>
 
-      <HStack color="black" 
-              padding="20px 0px 20px 30px">
-        <Text fontSize="md" fontWeight="normal">
+      <HStack padding="20px 0px 20px 30px" color="black">
+        <Text fontSize="md">
           See more
         </Text>
 
-        <FontAwesomeIcon icon={faArrowRight} />
+        <FontAwesomeIcon icon={faArrowRight} size="1x" />
       </HStack>
       
     </VStack>
