@@ -61,7 +61,7 @@ function Header() {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      bgGradient='linear(#292929, #252525)'
       zIndex={20}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
