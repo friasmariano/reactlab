@@ -7,6 +7,8 @@ import {
 } from "@chakra-ui/react";
 import { useAlertContext } from "../context/alertContext";
 import { useRef } from "react";
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faCheckCircle, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Alert() {
   const { isOpen, type, message, onClose } = useAlertContext();
@@ -22,7 +24,15 @@ function Alert() {
       <AlertDialogOverlay>
         <AlertDialogContent py={4} backgroundColor={isSuccess ? '#81C784' : '#FF8A65'}>
           <AlertDialogHeader fontSize="lg" fontWeight="bold">
-            {isSuccess ? 'All good!' : 'Oops!'}
+            {
+              isSuccess ?
+                  <FontAwesomeIcon icon={faCheckCircle} size="lg" style={{ marginRight: "15px" }}/> :
+                  <FontAwesomeIcon icon={faTimesCircle} size="lg" style={{ marginRight: "15px" }}/>
+            }
+
+
+            {isSuccess ?
+                'All good!' : 'Oops!'}
           </AlertDialogHeader>
           <AlertDialogBody>{message}</AlertDialogBody>
         </AlertDialogContent>
