@@ -1,5 +1,6 @@
 import React from "react";
 import {Box, Flex} from "@chakra-ui/react";
+import { getYear } from 'date-fns'
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p>Pete • © 2022</p>
+          <p>Pete • © { getYear(new Date())}</p>
         </Flex>
       </footer>
     </Box>
