@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -51,13 +51,42 @@ const handleClick = (anchor) => (e) => {
 };
 
 function Header() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [currentScrollPos, setCurrentScrollPos] = useState(0);
+  const [translateYPos, setTranslateYPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setPrevScrollPos(window.scrollY);
+
+      setTimeout(() => {
+        setCurrentScrollPos(window.scrollY);
+      }, 500);
+      
+      if (currentScrollPos < prevScrollPos) {
+        console.log("You're descending!");
+        setTranslateYPos(-200)
+      } else {
+        console.log("You're ascending");
+        setTranslateYPos(0);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+    
+  }, [window.scrollY])
+
   return (
     <Box
       position="fixed"
       top={0}
       left={0}
       right={0}
-      translateY={0}
+      translateY={translateYPos}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
