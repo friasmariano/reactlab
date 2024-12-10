@@ -25,3 +25,29 @@ code {
   /* box-shadow: 0px 5px 10px green; */
   opacity: 1;
 }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.headerBorder {
+  border: 1px solid orange;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.35s;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 1.35;
+  transition-timing-function: ease-in-out;
+}

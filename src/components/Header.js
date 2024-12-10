@@ -53,7 +53,8 @@ const handleClick = (anchor) => (e) => {
 function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [currentScrollPos, setCurrentScrollPos] = useState(0);
-  const [translateYPos, setTranslateYPos] = useState(0);
+  const [translateYPos, setTranslateYPos] = useState("");
+  const [isDescending, setIsDescending] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,14 +62,14 @@ function Header() {
 
       setTimeout(() => {
         setCurrentScrollPos(window.scrollY);
-      }, 500);
+      }, 250);
       
       if (currentScrollPos < prevScrollPos) {
-        console.log("You're descending!");
-        setTranslateYPos(-200)
+        setTranslateYPos('-200px');
+        setIsDescending(false);
       } else {
-        console.log("You're ascending");
-        setTranslateYPos(0);
+        setTranslateYPos('0px');
+        setIsDescending(true);
       }
     }
 
@@ -84,15 +85,24 @@ function Header() {
     <Box
       position="fixed"
       top={0}
+      
       left={0}
       right={0}
-      translateY={translateYPos}
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
+      // translate="auto"
+      // translateY="-10"
+      // transitionProperty="transform"
+      // transitionDuration=".3s"
+      // transitionTimingFunction="ease-in-out"
       bgGradient='linear(#292929, #252525)'
       zIndex={20}
-    >
+      className={isDescending ? 'fadeIn': 'fadeOut' }
+      style={
+        {
+          translate: `0px ${translateYPos}`,
+          
+        }
+      }
+      >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
