@@ -113,7 +113,7 @@ function Header() {
           <nav>
             {socials.map((socialLink) => {
               return (
-                <a key={socialLink.id} href={socialLink.url} >
+                <a key={socialLink.id} href={socialLink.url} target="_blank">
                   <FontAwesomeIcon icon={socialLink.icon} size="2x" style={ {marginRight: "20px"} } />
                 </a>
               )
@@ -123,7 +123,7 @@ function Header() {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#contact-me" 
+              <a href="#contact-me"
                  onClick={
                   handleClick('contact-me')
                 }>Contact Me</a>

@@ -29,7 +29,7 @@ const LandingSection = () => {
       comment: ''
     },
     onSubmit: (values, actions) => {
-      submit('https://i.pravatar.cc/150?img=7', values)
+      submit('https://api.digital.gob.do/v1/territories/regions', values)
 
       if (response?.type === 'success'){
         onOpen('success', response.message)

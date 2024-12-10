@@ -47,7 +47,7 @@ function BackToTop () {
     return(
         <Box 
             background="rgba(255, 255, 255, 0)" 
-            color="rgba(0, 0, 0, 0.5)" 
+            color="rgba(255, 255, 255, 0.7)" 
             width="80px"
             top="50vh"
             right="0"
