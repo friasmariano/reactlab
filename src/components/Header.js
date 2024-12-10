@@ -95,7 +95,7 @@ function Header() {
       // transitionTimingFunction="ease-in-out"
       bgGradient='linear(#292929, #252525)'
       zIndex={20}
-      className={isDescending ? 'fadeIn': 'fadeOut' }
+      className={isDescending ? 'slideDown': 'fadeOut' }
       style={
         {
           translate: `0px ${translateYPos}`,
