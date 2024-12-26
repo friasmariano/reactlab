@@ -28,7 +28,7 @@ The UI was build using <h3>Chakra UI</h3>
 
 LIVE LINK
 ===================
-Is <a href="https://portfolio-sample-nine.vercel.app/">here</a>
+Is <a href="https://portfolio-sample-nine.vercel.app/" target="_blank">here</a>
 
 
 
