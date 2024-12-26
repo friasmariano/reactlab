@@ -26,6 +26,14 @@ It was build using the CRA(Create React App) command.
 
 The UI was build using <h3>Chakra UI</h3>
 
+LIVE LINK
+===================
+Is <a href="https://portfolio-sample-nine.vercel.app/">here</a>
+
+
+
+DOWNLOAD
+===========
 After downloading it, run:
 
 <h3>npm install</h3>
